@@ -21,7 +21,6 @@ public interface IApplicationDbContext
     public DbSet<RedCodeRequest> RedCodeRequests { get; }
     public DbSet<BlueCheckin> BlueCheckins { get; }
     public DbSet<ScanLog> ScanLogs { get; }
-    public DbSet<CancelLog> CancelLogs { get; }
     public DbSet<GreenCheckin> GreenCheckins { get; }
     public DbSet<Checkin> Checkins { get; }
     public DbSet<RedCheckin> RedCheckins { get; }

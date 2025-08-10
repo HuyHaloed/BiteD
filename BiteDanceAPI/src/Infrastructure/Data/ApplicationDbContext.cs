@@ -32,7 +32,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<PurpleCheckin> PurpleCheckins => Set<PurpleCheckin>();
     public DbSet<Checkin> Checkins => Set<Checkin>();
     public DbSet<ScanLog> ScanLogs => Set<ScanLog>(); 
-    public DbSet<CancelLog> CancelLogs => Set<CancelLog>();
     public DbSet<PaymentScheme> PaymentSchemes => Set<PaymentScheme>();
 
     protected override void OnModelCreating(ModelBuilder builder)
