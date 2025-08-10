@@ -1,0 +1,30 @@
+.custom-select-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .location-icon {
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+    color: green; /* Adjust the color as needed */
+    top: 50%;
+  }
+  
+  .custom-select {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Adjust padding to make space for the icon */
+    border: 0;
+    /* appearance: none; Remove default arrow */
+    /* -webkit-appearance: none; /* Remove default arrow in Safari-moz-appearance: none; Remove default arrow in Firefox */
+    text-align: center; /* Center the text horizontally */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+    line-height: 1.5; /* Adjust line height for vertical centering */
+  }
+  
+  .custom-select:focus {
+    border-color: #3f51b5; /* Adjust focus border color as needed */
+    outline: none;
+  }

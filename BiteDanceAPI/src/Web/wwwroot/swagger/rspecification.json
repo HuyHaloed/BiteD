@@ -1,0 +1,4577 @@
+{
+  "x-generator": "NSwag v14.1.0.0 (NJsonSchema v11.0.2.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "BiteDanceAPI",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/swagger/Checkins/blue": {
+      "post": {
+        "tags": [
+          "Checkins"
+        ],
+        "operationId": "CheckinBlueQr",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckinBlueQrCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckinResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Checkins/green": {
+      "post": {
+        "tags": [
+          "Checkins"
+        ],
+        "operationId": "CheckinGreenQr",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckinGreenQrCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckinResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Checkins/red": {
+      "post": {
+        "tags": [
+          "Checkins"
+        ],
+        "operationId": "CheckinRedQr",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckinRedQrCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckinResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Checkins/blue/weekly": {
+      "get": {
+        "tags": [
+          "Checkins"
+        ],
+        "operationId": "GetWeeklyBlueCheckins",
+        "parameters": [
+          {
+            "name": "firstDayOfWeek",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WeeklyBlueCheckinDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Checkins/export": {
+      "get": {
+        "tags": [
+          "Checkins"
+        ],
+        "operationId": "ExportFteCheckins",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Departments": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "operationId": "GetDepartments",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DepartmentDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Locations": {
+      "get": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "GetLocations",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LocationDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "CreateLocation",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLocationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Locations/{id}": {
+      "get": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "GetLocation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LocationDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "UpdateLocation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLocationCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Locations/{id}/activate": {
+      "post": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "ActivateLocation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Locations/{id}/deactivate": {
+      "post": {
+        "tags": [
+          "Locations"
+        ],
+        "operationId": "DeactivateLocation",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus/template": {
+      "get": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "GetMonthlyMenuTemplate",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus": {
+      "get": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "GetMonthlyMenus",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MonthlyMenuDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "CreateMonthlyMenus",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus/weekly": {
+      "get": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "GetWeeklyMenu",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "firstDayOfWeek",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyMenuDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus/status": {
+      "get": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "GetMonthlyMenusStatus",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MonthlyMenuStatusDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus/{id}/delete": {
+      "delete": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "DeleteMonthlyMenus",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/MonthlyMenus/{id}/publish": {
+      "post": {
+        "tags": [
+          "MonthlyMenus"
+        ],
+        "operationId": "PublishMonthlyMenu",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Orders": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "GetWeeklyOrders",
+        "parameters": [
+          {
+            "name": "firstDayOfWeek",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WeeklyOrderDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "CreateOrder",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Orders/status": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "GetWeeklyOrdersStatus",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "firstDayOfWeek",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DailyOrderStatusDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Orders/{id}/cancel": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "operationId": "CancelOrder",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/requests": {
+      "get": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "GetRedCodeRequests",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "nullable": true,
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RedCodeRequestStatus"
+                }
+              ]
+            },
+            "x-position": 3
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          },
+          {
+            "name": "ReportDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "LocationId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 7
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedListOfRedCodeRequestDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "RequestRedCode",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestRedCodeCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/myrequests": {
+      "get": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "GetMyRedCodeRequests",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "nullable": true,
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RedCodeRequestStatus"
+                }
+              ]
+            },
+            "x-position": 3
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 4
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedListOfRedCodeRequestDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/redcodes/disable": {
+      "post": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "DisableRedCode",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisableRedCodeCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/requests/{locationId}/summary": {
+      "get": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "GetRedCodeRequestsSummary",
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedCodeRequestSummaryDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/requests/approve": {
+      "post": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "ApproveRedCodeRequest",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApproveRedCodeRequestCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/RedCodes/requests/reject": {
+      "post": {
+        "tags": [
+          "RedCodes"
+        ],
+        "operationId": "RejectRedCodeRequest",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectRedCodeRequestCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Reports/order/dailyReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "operationId": "GetDailyOrdersReport",
+        "parameters": [
+          {
+            "name": "reportDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DailyOrderReportDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Reports/checkin/dailyReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "operationId": "GetShiftCheckinsReport",
+        "parameters": [
+          {
+            "name": "reportDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "locationId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ShiftCheckinsReportDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Logs/LogScanCode": {
+      "post": {
+        "tags": [
+          "Logs"
+        ],
+        "operationId": "SubmitLog",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitLogCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Suppliers": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "GetSuppliers",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SupplierDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "CreateSupplier",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSupplierCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Suppliers/{id}": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "GetSupplier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SupplierDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "UpdateSupplier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSupplierCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Suppliers/SupplierMapping/{UserId}": {
+      "get": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "GetUserSupplier",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SupplierDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Suppliers/{id}/activate": {
+      "post": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "ActivateSupplier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Suppliers/{id}/deactivate": {
+      "post": {
+        "tags": [
+          "Suppliers"
+        ],
+        "operationId": "DeactivateSupplier",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/System/configs": {
+      "get": {
+        "tags": [
+          "System"
+        ],
+        "operationId": "GetConfigs",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ConfigDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Users/me": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "GetMe",
+        "parameters": [
+          {
+            "name": "includeAssignedLocations",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "UpdateProfile",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Users/{email}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "GetUser",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Users/admins": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "GetAdmins",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AdminDto"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Users/admins/{email}": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "UpdateAdmin",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAdminCommand"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/swagger/Users/admins/{email}/deactivate": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "DeactivateAdmin",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CheckinResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "isSuccess",
+          "message",
+          "codeType",
+          "dishNames",
+          "employeeName",
+          "scannedAt"
+        ],
+        "properties": {
+          "isSuccess": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          },
+          "statusType": {
+            "type": "string",
+            "nullable": true
+          },
+          "codeType": {
+            "$ref": "#/components/schemas/CodeType"
+          },
+          "dishNames": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "employeeName": {
+            "type": "string"
+          },
+          "scannedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CodeType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Green",
+          "Blue",
+          "Red",
+          "Purple"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "CustomErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "status",
+          "title",
+          "detail",
+          "errors"
+        ],
+        "properties": {
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "CheckinBlueQrCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locationId",
+          "userId"
+        ],
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string"
+          }
+        }
+      },
+      "CheckinGreenQrCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locationId",
+          "userId"
+        ],
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "string"
+          }
+        }
+      },
+      "CheckinRedQrCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locationId",
+          "scanCodeId"
+        ],
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scanCodeId": {
+            "type": "string"
+          }
+        }
+      },
+      "WeeklyBlueCheckinDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "maxScansPerDay",
+          "maxScansPerWeek",
+          "scansThisWeek",
+          "scansRemaining",
+          "checkins"
+        ],
+        "properties": {
+          "maxScansPerDay": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "maxScansPerWeek": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scansThisWeek": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scansRemaining": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checkins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BlueCheckinDto"
+            }
+          }
+        }
+      },
+      "BlueCheckinDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "datetime",
+          "locationName"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locationName": {
+            "type": "string"
+          }
+        }
+      },
+      "DepartmentDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "chargeCodes"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "chargeCodes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DepartmentChargeCodeDto"
+            }
+          }
+        }
+      },
+      "DepartmentChargeCodeDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "LocationDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "description",
+          "type",
+          "city",
+          "country",
+          "enableShift1",
+          "enableShift2",
+          "enableShift3",
+          "enableWeekday",
+          "enableWeekend",
+          "isActive",
+          "admins"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "enableShift1": {
+            "type": "boolean"
+          },
+          "enableShift2": {
+            "type": "boolean"
+          },
+          "enableShift3": {
+            "type": "boolean"
+          },
+          "enableWeekday": {
+            "type": "boolean"
+          },
+          "enableWeekend": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "supplierName": {
+            "type": "string",
+            "nullable": true
+          },
+          "admins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserDto"
+            }
+          }
+        }
+      },
+      "LocationType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Brewery",
+          "HeadOffice"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "UserDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "email",
+          "name",
+          "isAdmin",
+          "isSuperAdmin",
+          "isVegetarian",
+          "isManager",
+          "isSupplier",
+          "allowNotifications",
+          "assignedLocations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isSuperAdmin": {
+            "type": "boolean"
+          },
+          "isVegetarian": {
+            "type": "boolean"
+          },
+          "isManager": {
+            "type": "boolean"
+          },
+          "isSupplier": {
+            "type": "boolean"
+          },
+          "allowNotifications": {
+            "type": "boolean"
+          },
+          "preferredLocationId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "assignedLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocationDto"
+            }
+          }
+        }
+      },
+      "CreateLocationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "description",
+          "type",
+          "city",
+          "country",
+          "enableShift1",
+          "enableShift2",
+          "enableShift3",
+          "enableWeekday",
+          "enableWeekend",
+          "adminEmails"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "enableShift1": {
+            "type": "boolean"
+          },
+          "enableShift2": {
+            "type": "boolean"
+          },
+          "enableShift3": {
+            "type": "boolean"
+          },
+          "enableWeekday": {
+            "type": "boolean"
+          },
+          "enableWeekend": {
+            "type": "boolean"
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "adminEmails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "UpdateLocationCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "description",
+          "city",
+          "country",
+          "type",
+          "enableShift1",
+          "enableShift2",
+          "enableShift3",
+          "enableWeekday",
+          "enableWeekend",
+          "adminEmails"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LocationType"
+          },
+          "enableShift1": {
+            "type": "boolean"
+          },
+          "enableShift2": {
+            "type": "boolean"
+          },
+          "enableShift3": {
+            "type": "boolean"
+          },
+          "enableWeekday": {
+            "type": "boolean"
+          },
+          "enableWeekend": {
+            "type": "boolean"
+          },
+          "adminEmails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supplierId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "MonthlyMenuDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "year",
+          "month",
+          "dailyMenus"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dailyMenus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyMenuDto"
+            }
+          }
+        }
+      },
+      "DailyMenuDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "monthlyMenuId",
+          "date",
+          "shiftMenus"
+        ],
+        "properties": {
+          "monthlyMenuId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "shiftMenus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShiftMenuDto"
+            }
+          }
+        }
+      },
+      "ShiftMenuDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shift",
+          "dishes"
+        ],
+        "properties": {
+          "shift": {
+            "$ref": "#/components/schemas/ShiftType"
+          },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DishDto"
+            }
+          }
+        }
+      },
+      "ShiftType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Shift1",
+          "Shift2",
+          "Shift3"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "DishDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "type"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/DishType"
+          }
+        }
+      },
+      "DishType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Main",
+          "Vegetarian",
+          "Dessert",
+          "Soup"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "MonthlyMenuStatusDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "month",
+          "status"
+        ],
+        "properties": {
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MenuStatus"
+          },
+          "monthlyMenuId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "MenuStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "NoMenu",
+          "Published",
+          "Uploaded"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "WeeklyOrderDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dailyOrders",
+          "numberOfShiftsOrdered",
+          "numberOfShiftsScanned",
+          "numberOfShiftsRemaining"
+        ],
+        "properties": {
+          "dailyOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyOrderDto"
+            }
+          },
+          "numberOfShiftsOrdered": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfShiftsScanned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfShiftsRemaining": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "DailyOrderDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "date",
+          "locationName",
+          "canCancelOrder",
+          "shiftOrders"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "$ref": "#/components/schemas/DailyOrderStatus"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "canCancelOrder": {
+            "type": "boolean"
+          },
+          "shiftOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShiftOrderDto"
+            }
+          }
+        }
+      },
+      "DailyOrderStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Ordered",
+          "CanceledByUser",
+          "CanceledBySystem"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "ShiftOrderDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "shiftType",
+          "dishes"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ShiftOrderStatus"
+          },
+          "shiftType": {
+            "$ref": "#/components/schemas/ShiftType"
+          },
+          "locationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dishes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DishDto"
+            }
+          }
+        }
+      },
+      "ShiftOrderStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Ordered",
+          "Scanned",
+          "CanceledByUser",
+          "CanceledBySystem"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "DailyOrderStatusDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "isOrdered",
+          "canOrder"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "isOrdered": {
+            "type": "boolean"
+          },
+          "dailyOrderInfo": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DailyOrderDto"
+              }
+            ]
+          },
+          "canOrder": {
+            "type": "boolean"
+          }
+        }
+      },
+      "CreateOrderCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locationId",
+          "monthlyMenuId",
+          "date",
+          "shiftOrders"
+        ],
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "monthlyMenuId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "shiftOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ShiftOrderDto2"
+            }
+          }
+        }
+      },
+      "ShiftOrderDto2": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shiftType",
+          "dishIds"
+        ],
+        "properties": {
+          "shiftType": {
+            "$ref": "#/components/schemas/ShiftType"
+          },
+          "dishIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "PaginatedListOfRedCodeRequestDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "items",
+          "pageNumber",
+          "totalPages",
+          "totalCount",
+          "hasPreviousPage",
+          "hasNextPage"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RedCodeRequestDto"
+            }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RedCodeRequestDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "fullName",
+          "workEmail",
+          "status",
+          "note",
+          "workLocationName",
+          "orderNumbers",
+          "role",
+          "created"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "workEmail": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/RedCodeRequestStatus"
+          },
+          "note": {
+            "type": "string"
+          },
+          "workLocationName": {
+            "type": "string"
+          },
+          "orderNumbers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "role": {
+            "$ref": "#/components/schemas/RedCodeRequesterRole"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "checkInDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "guestTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "guestContactNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "guestPurposeOfVisit": {
+            "type": "string",
+            "nullable": true
+          },
+          "guestDateOfArrival": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "department": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BasicDepartmentDto"
+              }
+            ]
+          },
+          "departmentChargeCode": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DepartmentChargeCodeDto"
+              }
+            ]
+          },
+          "redScanCode": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RedScanCode"
+              }
+            ]
+          }
+        }
+      },
+      "RedCodeRequestStatus": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Submitted",
+          "Approved",
+          "Rejected",
+          "Disabled"
+        ],
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "RedCodeRequesterRole": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Temps",
+          "Contractors",
+          "Guests"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "BasicDepartmentDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "RedScanCode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ScanCode"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "redCodeId": {
+                "type": "string"
+              },
+              "maxNumScans": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "redCodeRequest": {
+                "$ref": "#/components/schemas/RedCodeRequest"
+              },
+              "redCodeRequestId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "orderNumbers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "location": {
+                "$ref": "#/components/schemas/Location"
+              },
+              "locationId": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "RedCodeRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fullName": {
+                "type": "string"
+              },
+              "workEmail": {
+                "type": "string"
+              },
+              "checkInDate": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              },
+              "guestPurposeOfVisit": {
+                "type": "string",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/RedCodeRequestStatus"
+              },
+              "note": {
+                "type": "string"
+              },
+              "workLocation": {
+                "$ref": "#/components/schemas/Location"
+              },
+              "workLocationId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "orderNumbers": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "department": {
+                "$ref": "#/components/schemas/Department"
+              },
+              "departmentChargeCode": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/DepartmentChargeCode"
+                  }
+                ]
+              },
+              "redScanCode": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RedScanCode"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Location": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "$ref": "#/components/schemas/LocationType"
+              },
+              "city": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "enableShift1": {
+                "type": "boolean"
+              },
+              "enableShift2": {
+                "type": "boolean"
+              },
+              "enableShift3": {
+                "type": "boolean"
+              },
+              "enableWeekday": {
+                "type": "boolean"
+              },
+              "enableWeekend": {
+                "type": "boolean"
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "supplier": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Supplier"
+                  }
+                ]
+              },
+              "supplierId": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "admins": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "Supplier": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "certificateOfBusinessNumber": {
+                "type": "string"
+              },
+              "contractStartDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "contractEndDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "address": {
+                "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "picName": {
+                "type": "string"
+              },
+              "picPhoneNumber": {
+                "type": "string"
+              },
+              "baseLocation": {
+                "type": "string"
+              },
+              "userId": {
+                "type": "string",
+                "nullable": true
+              },
+              "isActive": {
+                "type": "boolean"
+              },
+              "assignedLocations": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Location"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BaseEntity": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "domainEvents"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "domainEvents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BaseEvent"
+            }
+          }
+        }
+      },
+      "BaseEvent": {
+        "type": "object",
+        "x-abstract": true,
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "email",
+          "name",
+          "isAdmin",
+          "isVegetarian",
+          "isManager",
+          "isSupplier",
+          "allowNotifications",
+          "assignedLocations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "isVegetarian": {
+            "type": "boolean"
+          },
+          "isManager": {
+            "type": "boolean"
+          },
+          "isSupplier": {
+            "type": "boolean"
+          },
+          "allowNotifications": {
+            "type": "boolean"
+          },
+          "preferredLocation": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Location"
+              }
+            ]
+          },
+          "preferredLocationId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "assignedLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Location"
+            }
+          }
+        }
+      },
+      "Department": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "chargeCodes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/DepartmentChargeCode"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "DepartmentChargeCode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "department": {
+                "$ref": "#/components/schemas/Department"
+              },
+              "departmentId": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "code": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "BaseAuditableEntity": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntity"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "created": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "string",
+                "nullable": true
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "lastModifiedBy": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ScanCode": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseAuditableEntity"
+          },
+          {
+            "type": "object",
+            "x-abstract": true,
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "$ref": "#/components/schemas/CodeType"
+              },
+              "validFrom": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "validTill": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "isDisabled": {
+                "type": "boolean"
+              },
+              "disabledReason": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "DisableRedCodeCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "redCodeRequestId",
+          "reason"
+        ],
+        "properties": {
+          "redCodeRequestId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      },
+      "RedCodeRequestSummaryDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locationId",
+          "totalRequests",
+          "requestsByStatus"
+        ],
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRequests": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestsByStatus": {
+            "type": "object",
+            "x-dictionaryKey": {
+              "$ref": "#/components/schemas/RedCodeRequestStatus"
+            },
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "RequestRedCodeCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fullName",
+          "userId",
+          "workLocationId",
+          "workEmail",
+          "orderNumbers",
+          "departmentId"
+        ],
+        "properties": {
+          "fullName": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "workLocationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "workEmail": {
+            "type": "string"
+          },
+          "orderNumbers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "checkInDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "departmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentChargeCodeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "guestPurposeOfVisit": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ApproveRedCodeRequestCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RejectRedCodeRequestCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "note"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      },
+      "DailyOrderReportDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dailyOrders",
+          "numberOfPreOrder"
+        ],
+        "properties": {
+          "dailyOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyReportDish"
+            }
+          },
+          "numberOfPreOrder": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "DailyReportDish": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dailyOrders",
+          "date",
+          "dish",
+          "shift",
+          "ordersNumber"
+        ],
+        "properties": {
+          "dailyOrders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyReportDish"
+            }
+          },
+          "date": {
+            "type": "string"
+          },
+          "dish": {
+            "type": "string"
+          },
+          "shift": {
+            "type": "string"
+          },
+          "ordersNumber": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ShiftCheckinsReportDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shiftCheckins",
+          "numberOfGreenScanned",
+          "numberOfBlueScanned",
+          "numberOfRedScanned"
+        ],
+        "properties": {
+          "shiftCheckins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CheckinDto"
+            }
+          },
+          "numberOfGreenScanned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfBlueScanned": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfRedScanned": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "CheckinDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "type",
+          "shift"
+        ],
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/CodeType"
+          },
+          "shift": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "scanCodeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "redcheckin_scancodeid": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SubmitLogCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "userId",
+          "locationId",
+          "scanCode",
+          "logMessage"
+        ],
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scanCode": {
+            "type": "string"
+          },
+          "logMessage": {
+            "type": "string"
+          },
+          "shiftOrderId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "SupplierDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "country",
+          "certificateOfBusinessNumber",
+          "contractStartDate",
+          "contractEndDate",
+          "address",
+          "phoneNumber",
+          "email",
+          "picName",
+          "picPhoneNumber",
+          "baseLocation",
+          "isActive",
+          "assignedLocations"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "certificateOfBusinessNumber": {
+            "type": "string"
+          },
+          "contractStartDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "contractEndDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "picName": {
+            "type": "string"
+          },
+          "picPhoneNumber": {
+            "type": "string"
+          },
+          "baseLocation": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "assignedLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocationDto"
+            }
+          }
+        }
+      },
+      "CreateSupplierCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "country",
+          "certificateOfBusinessNumber",
+          "contractStartDate",
+          "contractEndDate",
+          "address",
+          "phoneNumber",
+          "email",
+          "picName",
+          "picPhoneNumber",
+          "baseLocation",
+          "locationIds"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "certificateOfBusinessNumber": {
+            "type": "string"
+          },
+          "contractStartDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "contractEndDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "picName": {
+            "type": "string"
+          },
+          "picPhoneNumber": {
+            "type": "string"
+          },
+          "baseLocation": {
+            "type": "string"
+          },
+          "locationIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "UpdateSupplierCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "country",
+          "certificateOfBusinessNumber",
+          "contractStartDate",
+          "contractEndDate",
+          "address",
+          "phoneNumber",
+          "email",
+          "picName",
+          "picPhoneNumber",
+          "baseLocation",
+          "locationIds"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "certificateOfBusinessNumber": {
+            "type": "string"
+          },
+          "contractStartDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "contractEndDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "picName": {
+            "type": "string"
+          },
+          "picPhoneNumber": {
+            "type": "string"
+          },
+          "baseLocation": {
+            "type": "string"
+          },
+          "locationIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "ConfigDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "allowedCities",
+          "allowedCountries"
+        ],
+        "properties": {
+          "allowedCities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowedCountries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "UpdateProfileCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "isVegetarian",
+          "allowNotifications"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "isVegetarian": {
+            "type": "boolean"
+          },
+          "allowNotifications": {
+            "type": "boolean"
+          },
+          "preferredLocationId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "AdminDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "email",
+          "name",
+          "isAdmin",
+          "assignedLocations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "isAdmin": {
+            "type": "boolean"
+          },
+          "assignedLocations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocationDto"
+            }
+          }
+        }
+      },
+      "UpdateAdminCommand": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "email",
+          "locationIds"
+        ],
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "locationIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://login.microsoftonline.com/66e853de-ece3-44dd-9d66-ee6bdf4159d4/oauth2/v2.0/authorize",
+            "tokenUrl": "https://login.microsoftonline.com/66e853de-ece3-44dd-9d66-ee6bdf4159d4/oauth2/v2.0/token",
+            "scopes": {
+              "api://8ad2cf93-4e12-4a04-a46b-075dd917f7d8/BiteDance.Access": "Access API"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}

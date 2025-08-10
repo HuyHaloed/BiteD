@@ -1,0 +1,70 @@
+/* src/LocationSelector.css */
+.location-selector {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    margin: 20px;
+}
+
+.location-label {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.location-icon {
+    margin-right: 10px;
+    color: green;
+    display: flex;
+    align-items: center;
+}
+
+.selected-location {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-arrow {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: #f0f0f0;
+}

@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": ".NET Core Launch",
+        "type": "coreclr",
+        "request": "launch",
+        "program": "${workspaceFolder}/BiteDanceAPI/src/Web/bin/Debug/net8.0/BiteDanceAPI.Web.dll",
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "stopAtEntry": false
+      }
+    ]
+  }
